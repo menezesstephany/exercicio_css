@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Cards</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <style>
+        .card-img-overlay{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bootstrap - Cards</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <article class="card text-bg-dark">
+                    <header class="card-header">
+                        Desenvolvimento Web
+                    </header>
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title">Cards do Bootstrap</h4>
+                        <p class="card-text">Conheça os Cards do Bootstrap e suas variações.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>17/09/2024 às 11:54</time>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-dark">
+                    <img src="data:image/jpeg;base64,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" />
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Titulo do card</h4>
+                        <h5 class="card-subtitle">Subtítulo do card</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur asperiores, animi, excepturi libero architecto nam ad, odio eveniet est consectetur corporis adipisci quia doloribus deleniti. Tenetur porro iste similique omnis.
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Cabeçalho do header
+                    </div>
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title">Titulo do card</h4>
+                        <h5 class="card-subtitle">Subtítulo do card</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur asperiores, animi, excepturi libero architecto nam ad, odio eveniet est consectetur corporis adipisci quia doloribus deleniti. Tenetur porro iste similique omnis.
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
