@@ -1,0 +1,104 @@
+@import "mapas.less";
+@import "variaveis.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @fontFamily;
+}
+
+body{
+    background-color: #cores[backgroundColor];
+    color: #cores[textColor];
+}
+
+header {
+    background-color: #cores[headerBackground];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: @maxWidth;
+        padding: @padding;
+        margin: 0 auto;
+
+        @media @breakpointMobile{
+            max-width: 70%;
+        }
+
+        @media @breakpointTablet{
+            justify-content: center;
+        }
+    }
+
+    .menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-weight: bold;
+            margin-left: 24px;
+
+            a {
+                color: #cores[textColor];
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    li{
+        list-style: none;
+    }
+
+    h2, h4, p{
+        color: black;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1%;
+        row-gap: 4%;
+        justify-items: center; // Centraliza as imagens horizontalmente
+        width: 100%;
+
+        .product-item {
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 16px;
+            }
+
+            .product-button {
+                display: block;
+                background-color: #cores[buttonColor];
+                color: #cores[textColor];
+                text-align: center;
+                padding: 8px 0;
+                border-radius: 8px;
+                margin-top: 8px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #cores[buttonHoverColor];
+                }
+            }
+        }
+    }
+}
