@@ -31,8 +31,14 @@ header {
         padding: @padding;
         margin: 0 auto;
 
-        @media @breakpointMobile{
-            max-width: 70%;
+        @media @breakpointMobile {
+            .products {
+                display: block;
+            }
+        
+            .product-item  {
+                margin-bottom: 32px;
+            }
         }
 
         @media @breakpointTablet{

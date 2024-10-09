@@ -23,8 +23,11 @@ header .container {
   margin: 0 auto;
 }
 @media (max-width: 767px) {
-  header .container {
-    max-width: 70%;
+  header .container .products {
+    display: block;
+  }
+  header .container .product-item {
+    margin-bottom: 32px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
