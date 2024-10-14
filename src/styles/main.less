@@ -1,9 +1,6 @@
 @import "mapas.less";
 @import "variaveis.less";
 
-@breakpointMobile: ~"(max-width: 767px)";
-@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
-
 
 * {
     margin: 0;
@@ -30,20 +27,6 @@ header {
         max-width: @maxWidth;
         padding: @padding;
         margin: 0 auto;
-
-        @media @breakpointMobile {
-            .products {
-                display: block;
-            }
-        
-            .product-item  {
-                margin-bottom: 32px;
-            }
-        }
-
-        @media @breakpointTablet{
-            justify-content: center;
-        }
     }
 
     .menu {
@@ -106,5 +89,23 @@ section {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+    max-width: 80%;
+    }
+    .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .products {
+    display: block;
+    }
+    .products .product-item {
+    margin-bottom: 32px;
     }
 }
